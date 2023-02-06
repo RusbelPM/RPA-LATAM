@@ -1,0 +1,56 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    
+                
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // define dos columnas de tamaño igual
+        gap: 16px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr; // cambia a una sola columna en dispositivos pequeños
+          }
+        h2{
+            padding: 30px 30px;
+            letter-spacing: normal;
+            color: orange;
+
+        }
+        h3{
+            padding: 10px 0;
+            letter-spacing: normal;
+        }
+
+        p{
+            margin: 0 0;
+        }
+
+        .main-container-left{
+            flex:1;
+            flex-direction: column;
+            padding: 30px 10px;
+
+            .container-top-left{
+                .article-main{
+                    background-color: aqua;
+                    margin-bottom: 30px;
+                }
+            }
+            
+
+        }
+        .main-container-right{
+            flex:2;
+            flex-direction: column;
+            flex-direction: column;
+            padding: 30px 10px;
+            
+        }
+    }
+}
