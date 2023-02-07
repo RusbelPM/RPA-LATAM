@@ -1,11 +1,11 @@
 export * from './the-last'
-export * from './News'
-export * from './Technology'
-export * from './Science'
-export * from './Sports'
+export * from './news'
+export * from './technology'
+export * from './science'
+export * from './sports'
 export * from './business'
-export * from './Entertainment'
-export * from './Health'
-export * from './NoteNews'
+export * from './entertainment'
+export * from './health'
+export * from './note-news'
 
 

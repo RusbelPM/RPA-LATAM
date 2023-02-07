@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate} from 'react-router-dom'
 import { routes } from './routes';
-import { NoteNews } from '../page/NoteNews';
+import { NoteNews } from '../page/note-news';
 
 import { Navbar, Footer } from '../components';
 
@@ -8,6 +8,7 @@ export const AppRouter = () => {
   return (
     <>
     <Navbar/>
+    <hr className="line"/>
       <Routes>
         {
           routes.map( route =>(

@@ -1,22 +1,20 @@
 
-const clases = {
+const classes = {
   subscribe:'subscribe',
   logo:'subscribe__logo',
-  ctabtn:'subscribe__wrap-btn p-10',
+  wrapbtn:'subscribe__wrap-btn p-10',
   button:'subscribe__button',
 
 }
 
 export const Subscribe = () => {
   return (
-    <>
-      <nav className={clases.subscribe}>
-        <div className={clases.logo}>Logo</div>
-          <div className={clases.ctabtn}>
-            <button className={`${clases.button} s-btn`}><a href="">Inicia Sesión</a></button>
-            <button className={`${clases.button} p-btn`}><a href="" >Suscríbete</a></button>
+      <nav className={classes.subscribe}>
+        <div className={classes.logo}>Logo</div>
+          <div className={classes.wrapbtn}>
+            <button type="button" className={`${classes.button} s-btn`}><a  href="#">Inicia Sesión</a></button>
+            <button itemProp="description" className={`${classes.button} p-btn`}><a href="#" >Suscríbete</a></button>
           </div>
     </nav>
-    </>
     )
 }
