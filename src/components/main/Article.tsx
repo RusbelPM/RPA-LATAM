@@ -1,3 +1,5 @@
+import "../../styles/components/_article.scss";
+
 const Article = () => {
   return (
     <div className="article">

@@ -1,0 +1,25 @@
+.premium{
+    background-color: #af695c;
+    color: #fff;
+    padding-bottom: 20px;
+
+    .h2__premium{
+        font-size: 50px;
+        color: #fff;
+        margin: 10px 50px;
+    }
+    .article__premium{        
+            .article__premium__image{
+                width: 80%;
+                height: 100%;
+                object-fit: cover;
+                margin: auto;
+            }
+            .article__premium__content{ 
+                margin: 5px 35px;
+                .h3__premium{
+                    font-size: 30px;
+                }                           
+            }        
+    }
+}

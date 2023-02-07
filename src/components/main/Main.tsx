@@ -1,5 +1,6 @@
 import "../../styles/components/_main.scss";
 import ContainLeft from "./ContainLeft";
+import ContainRight from "./ContainRight";
 
 const Main = () => {
   return (
@@ -8,8 +9,9 @@ const Main = () => {
         <ContainLeft />
 
         {/* Separacion de los section  */}
+        <ContainRight />
 
-        <section className="main-container-right">
+        {/* <section className="main-container-right">
           <div className="container-full-right">
             <div className="category">
               <h2>Ultimo Minuto</h2>
@@ -32,7 +34,7 @@ const Main = () => {
               </div>
             </article>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
