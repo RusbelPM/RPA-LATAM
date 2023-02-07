@@ -8,7 +8,7 @@ const ContainLeft = () => {
 
   return (
     <section className="containleft">
-      <Contain category="Medicina" data={health} lotContent={3} />
+      <Contain category="Medicina" data={health} lotContent={9} />
       <Contain category="Negocio" data={business} />
     </section>
   );
