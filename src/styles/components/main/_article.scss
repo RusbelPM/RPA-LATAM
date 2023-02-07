@@ -1,21 +1,17 @@
 .article{
-    margin-bottom: 30px;
+    padding-left: 30px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr); // define dos columnas de tamaño igual
     grid-template-areas: "columna1 columna2";
     gap: 16px;
+    border-left: 1px solid $color-emp-ter;
 
-    h3{
-        padding: 10px 0;
-        letter-spacing: normal;
-        color: #af695c;
-    }
-
-    .article-content{
+    &__content{
         grid-area: columna1;
     }
 
-    .article-image{
+    &__image{
         grid-area: columna2;
         img{
             object-fit: cover;
@@ -25,12 +21,20 @@
     }
     
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile) {
         grid-template-columns: repeat(1,1fr); // cambia a una sola columna en dispositivos pequeños
         grid-template-areas: "columna2"
-                            "columna1";
+                            "columna1";        
+        border-bottom: 1px solid $color-emp-ter;
+        border-left:none ;
+        padding-left: 0;
+        
+        h1{
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        p{
+            display: none;
+        }       
     }
-
-
-
 }

@@ -1,6 +1,5 @@
-import Article from "./Article";
-import "../../styles/components/_contain.scss";
 import { Articles } from "../../interfaces";
+import Article from "./article";
 
 interface Props {
   category?: string;
@@ -8,15 +7,19 @@ interface Props {
   lotContent?: number;
 }
 
+const classes = {
+  main: "contain",
+};
+
 const Contain: React.FC<Props> = ({
   category = "",
   data = [],
   lotContent = 5,
 }) => {
   return (
-    <div className="contain">
-      <h2 className="h2">{category}</h2>
-      {data.slice(0, lotContent).map((dat) => (
+    <div className={classes.main}>
+      <h1>{category}</h1>
+      {data.slice(3, lotContent).map((dat) => (
         <Article key={dat.title} {...dat} />
       ))}
     </div>

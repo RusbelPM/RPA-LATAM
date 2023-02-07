@@ -1,14 +1,19 @@
 import { Articles } from "../../interfaces";
-import "../../styles/components/_article.scss";
 
-const Article = ({ title, urlToImage, description }: Articles) => {
+const classes = {
+  main: "article",
+  content: "article__content",
+  imagen: "article__image",
+};
+
+const Article: React.FC<Articles> = ({ title, urlToImage, description }) => {
   return (
-    <div className="article">
-      <div className="content">
-        <h3>{title}</h3>
+    <div className={classes.main}>
+      <div className={classes.content}>
+        <h2>{title}</h2>
         <p>{description}</p>
       </div>
-      <div className="content-image">
+      <div className={classes.imagen}>
         <img src={urlToImage} alt={title} />
       </div>
     </div>

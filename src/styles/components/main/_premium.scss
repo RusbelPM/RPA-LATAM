@@ -1,0 +1,25 @@
+.premium{
+    background-color: $color-emp-ter;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin:20px 0; 
+
+    h1{
+        color: $color-emp-pri;
+        font-size: 50px;
+    }
+    h2{
+        color: $color-emp-pri;
+        font-size: 30px;
+    }
+    p{
+        color: $color-emp-pri; 
+    }
+    @media (max-width: $mobile ) {
+        padding: 20px 20px;
+        p{
+            display: none;
+        }
+    }
+}

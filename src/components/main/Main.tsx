@@ -1,11 +1,15 @@
-import "../../styles/components/_main.scss";
-import ContainLeft from "./ContainLeft";
-import ContainRight from "./ContainRight";
+import ContainLeft from "./contain-left";
+import ContainRight from "./contain-right";
+
+const classes = {
+  main: "main",
+  content: "main__container",
+};
 
 const Main = () => {
   return (
-    <div className="main">
-      <div className="container">
+    <div className={classes.main}>
+      <div className={classes.content}>
         <ContainLeft />
         <ContainRight />
       </div>

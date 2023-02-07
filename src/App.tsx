@@ -1,5 +1,4 @@
-import Main from "./components/main/Main";
-import "./styles/_global.scss";
+import Main from "./components/main/main";
 
 function App() {
   return (
