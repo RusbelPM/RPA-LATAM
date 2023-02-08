@@ -1,19 +1,16 @@
+import LayoutContent from "../../layout/LayoutContent";
+import { LayoutGrid } from "../../layout/LayoutGrid";
 import ContainLeft from "./contain-left";
 import ContainRight from "./contain-right";
 
-const classes = {
-  main: "main",
-  content: "main__container",
-};
-
 const Main = () => {
   return (
-    <div className={classes.main}>
-      <div className={classes.content}>
+    <LayoutContent>
+      <LayoutGrid>
         <ContainLeft />
         <ContainRight />
-      </div>
-    </div>
+      </LayoutGrid>
+    </LayoutContent>
   );
 };
 export default Main;
