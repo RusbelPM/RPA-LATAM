@@ -22,12 +22,16 @@ const Premium: React.FC<Props> = ({
   premium = true,
 }) => {
   return (
-    <div className={classes.main}>
-      <h1>{category}</h1>
-      {data.slice(2, lotContent).map((dat) => (
-        <Article key={dat.title} {...dat} />
-      ))}
-    </div>
+    <>
+      <div className={classes.main}>
+        <h1>{category}</h1>
+        <div className={classes.content}>
+          {data.slice(0, lotContent).map((dat) => (
+            <Article key={dat.title} {...dat} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 export default Premium;

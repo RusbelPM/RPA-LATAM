@@ -1,4 +1,12 @@
 .layout-content{
-    width: 80%;
+    width: 1200px;
     margin: auto;
+
+    @media (max-width: $desktop ) {
+        width: 80%;
+    }
+
+    @media (max-width: $mobile ) {
+        width: 90%;
+    }
 }

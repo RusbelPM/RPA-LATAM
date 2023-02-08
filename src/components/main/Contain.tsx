@@ -17,12 +17,14 @@ const Contain: React.FC<Props> = ({
   lotContent = 5,
 }) => {
   return (
-    <div className={classes.main}>
+    <>
       <h1>{category}</h1>
-      {data.slice(3, lotContent).map((dat) => (
-        <Article key={dat.title} {...dat} />
-      ))}
-    </div>
+      <div className={classes.main}>
+        {data.slice(0, lotContent).map((dat) => (
+          <Article key={dat.title} {...dat} />
+        ))}
+      </div>
+    </>
   );
 };
 export default Contain;

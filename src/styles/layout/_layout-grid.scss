@@ -1,18 +1,6 @@
 .layout-grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); // define dos columnas de tamaño igual
-    grid-template-areas: "content-left content-right";
+    grid-template-columns: repeat(1,1fr);
     gap: 30px;
-
-    @media (max-width: $desktop ) {
-        grid-template-columns: repeat(1,1fr); // cambia a una sola columna en dispositivos pequeños
-        grid-template-areas: "content-left"
-                                "content-right";            
-    }
-
-    @media (max-width: $mobile ) {
-        grid-template-columns: repeat(1,1fr); // cambia a una sola columna en dispositivos pequeños
-        grid-template-areas: "content-left"
-                                "content-right";            
-    }
+    padding: 30px 0px;
 }
