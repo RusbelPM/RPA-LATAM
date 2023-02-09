@@ -8,7 +8,6 @@ export const AppRouter = () => {
   return (
     <>
     <Navbar/>
-    <hr className="line"/>
       <Routes>
         {
           routes.map( route =>(

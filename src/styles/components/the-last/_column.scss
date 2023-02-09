@@ -1,0 +1,18 @@
+.magazine-column {
+    padding: 0 1.5rem;
+    grid-column: span 5;
+    
+    @media (min-width: $min-desktop) {
+      grid-column: span 1;
+      border-right: 1px solid $color-border;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    
+    &:nth-child(2) {
+      @media (min-width: $min-desktop) {
+        grid-column: span 2;
+      }
+    }
+  }

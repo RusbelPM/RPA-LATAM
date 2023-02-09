@@ -1,15 +1,17 @@
-
-
 .navbar {
     background: $color-primary;
     z-index: 1;
     top: 0;
     width: 100%;
-    
 
     &__sidebar-menu{
         height: 50px;
         margin: 0 auto;
+        border-bottom: 1px solid $semi-dark;
+
+        @media (max-width:  $max-desktop) {
+            border-bottom: none;
+        }
     }
     &__menu-items{
         align-items: center;
@@ -25,7 +27,7 @@
         line-height: 50px;
         font-size: 11px;
         a{  
-            color: #B0695C;
+            color: $color-semi-third;
             text-decoration: none;
             position: relative;
             border: solid 1px;
@@ -35,7 +37,7 @@
         a::after{
             content: '';
             position: absolute;
-            background: #2A2A2A;
+            background: $semi-dark;
             height: 2px;
             width: 0;
             left: 0;
@@ -43,7 +45,7 @@
             transition: 0.3s;
         }
         a:hover{
-            color: #2A2A2A;
+            color: $semi-dark;
         }
         a:hover:after{
             width: 100%;
@@ -139,13 +141,8 @@
             left: 0;
             transition: all 0.6s ease;
             padding-left: 0;
+            z-index: 1;
         }
        
-    }
-}
-
-@media screen and (max-width:$max-desktop) {
-    .line{
-        display: none;
     }
 }

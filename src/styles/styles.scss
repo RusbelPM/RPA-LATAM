@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&display=swap');
+
 :root {
     --color-background: #ffffff;
     --color-background-invert: #312F30;
@@ -6,6 +8,11 @@
     --color-white-empresa: #312F30;
     --color-input-background: #000;
     --color-input-background-invert: #fcfcfc;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 .dark-theme-variables {
     --color-background: #312F30;
@@ -84,7 +91,11 @@ html {
 #root,
 html,
 body {
-    height: 100%;
+    font-family: "DM Sans", sans-serif;
+	font-size: rem;
+	line-height: 1.5;
+	background-color: #f8f3eb;
+	color: #484847;
     background: linear-gradient(90deg, rgba(248,221,206,1) 0%, rgba(249,244,237,1) 53%, rgba(252,224,218,1) 100%);
 }
 
@@ -118,12 +129,32 @@ h5,
 h6 {
  font-weight: normal;
 }
+img{
+    width: 100%;
+}
+footer {
+    color: #323131;
+    padding: 30px;
+    h2{
+        padding: 10px 0;
+    }
+    p{
+        padding: 5px 0;
+        line-height: 1;
+    }
+}
+
 
 @import "./variables/";
 @import "./base/";
 @import "./global-components/";
 @import "./page/";
 @import "./components/";
+
+
+
+
+
 
 
 

@@ -1,0 +1,33 @@
+.article {
+	& + .article {
+		padding-top: 2rem;
+		margin-top: 2rem;
+		border-top: 1px solid $color-border;
+	}
+
+	&__article-img {
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+	&__article-title {
+		font-family: "Fraunces", serif;
+		font-weight: 900;
+		line-height: 1.25;
+		color: $semi-dark;
+		font-size: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	&__article-excerpt {
+		margin-top: 1.5rem;
+		font-size: 1.125rem;
+		line-height: 1.4;
+		p + p {
+			margin-top: 1.5rem;
+		}
+	}
+	&__article-link {
+		color: inherit;
+	}
+}
