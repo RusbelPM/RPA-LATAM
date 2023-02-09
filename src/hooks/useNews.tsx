@@ -46,6 +46,7 @@ export const useNote = (title: string = '') => {
 
     useEffect(() => {
         getNote();
+        //eslint-disable-next-line
     }, [])
     
     return {

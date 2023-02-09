@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import { useCategories } from "../hooks"
 import { Articles } from "../interfaces"
-import { ArticleNews } from '../components/the-last/article';
+import { ArticleNews } from '../components';
 
 const classes = {
   thelast: 'responsive-wrapper',
@@ -12,12 +12,12 @@ const classes = {
 
 export const Categories = () => {
   const {pathname} = useLocation()
-  const category = pathname.replace('/', '')
+  const category = pathname.replace('/','')
   const {isLoading, categories} = useCategories(category)
 
   const list = [];
   list.push({ idx: 'column-1', data: categories.slice(1, 4) });
-  list.push({ idx: 'column-2', data: categories.slice(9, 12) });
+  list.push({ idx: 'column-2', data: categories.slice(5, 8) });
   list.push({ idx: 'column-3', data: categories.slice(13, 16) });
 
   if (isLoading) {
