@@ -1,25 +1,34 @@
 .premium{
     background-color: $color-emp-ter;
-    padding-bottom: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin:20px 0; 
-
+    padding: 20px 20px 20px 0px;
+    
+    &__article{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        border-bottom: $color-emp-sec;
+        @media (max-width:$desktop){
+            grid-template-columns: repeat(2,1fr);            
+        }
+        @media (max-width:$mobile){
+            grid-template-columns: repeat(1,1fr);
+            padding-left: 20px;
+            h2{
+                border-bottom:1px solid $color-emp-sec;
+            }            
+        }
+    }
     h1{
         color: $color-emp-pri;
         font-size: 50px;
+        padding-left: 25px;       
     }
     h2{
         color: $color-emp-pri;
         font-size: 30px;
     }
     p{
-        color: $color-emp-pri; 
+        display: none; 
     }
-    @media (max-width: $mobile ) {
-        padding: 20px 20px;
-        p{
-            display: none;
-        }
-    }
+    
 }
