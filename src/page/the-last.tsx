@@ -1,3 +1,4 @@
+import { Carousel } from "../components/carousel/carousel";
 import { useArticles } from "../hooks"
 
 
@@ -15,6 +16,8 @@ export const TheLast = () => {
   }
   return (
 
-    <h1>Header</h1>
+    <div>
+      <Carousel/>
+    </div>
   )
 }

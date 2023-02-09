@@ -1,1 +1,1 @@
-export * from './last-list'
+export * from './article'
