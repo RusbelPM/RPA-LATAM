@@ -1,5 +1,5 @@
-import Main from "../components/main/main";
 import { Categories } from "../page";
+import Home from "../page/home";
 
 interface Route {
   to: string;
@@ -12,7 +12,7 @@ export const routes: Route[] = [
   {
     to: "/",
     path: "/",
-    Component: Main,
+    Component: Home,
     name: "Lo último",
   },
   {

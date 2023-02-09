@@ -9,12 +9,14 @@ const classes = {
 };
 
 interface Props {
+  titleCategory?: string;
   nameCategory?: string;
   lotContent?: number;
   premium?: boolean;
 }
 
 const Premium: React.FC<Props> = ({
+  titleCategory = "",
   nameCategory = "",
   lotContent,
   premium = true,
@@ -23,7 +25,7 @@ const Premium: React.FC<Props> = ({
   return (
     <>
       <div className={classes.main}>
-        <h1>{nameCategory}</h1>
+        <h1>{titleCategory}</h1>
         <div className={classes.content}>
           {categories.slice(0, lotContent).map((dat) => (
             <Article key={dat.title} {...dat} />

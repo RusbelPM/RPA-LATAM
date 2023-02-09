@@ -1,9 +1,9 @@
 import { Articles } from "../../interfaces";
 
 const classes = {
-  main: "article",
-  content: "article__content",
-  imagen: "article__image",
+  main: "article-main",
+  content: "article-main__content",
+  imagen: "article-main__image",
 };
 
 const Article: React.FC<Articles> = ({ title, urlToImage, description }) => {
