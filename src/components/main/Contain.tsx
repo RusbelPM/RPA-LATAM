@@ -1,9 +1,9 @@
-import { Articles } from "../../interfaces";
+import { useCategories } from "../../hooks";
 import Article from "./article";
 
 interface Props {
-  category?: string;
-  data?: Array<Articles>;
+  nameCategory?: string;
+  titleCategory?: string;
   lotContent?: number;
 }
 
@@ -12,15 +12,16 @@ const classes = {
 };
 
 const Contain: React.FC<Props> = ({
-  category = "",
-  data = [],
-  lotContent = 5,
+  titleCategory = "",
+  nameCategory = "",
+  lotContent = 6,
 }) => {
+  const { categories } = useCategories(nameCategory);
   return (
     <>
-      <h1>{category}</h1>
+      <h1>{titleCategory}</h1>
       <div className={classes.main}>
-        {data.slice(0, lotContent).map((dat) => (
+        {categories.slice(0, lotContent).map((dat) => (
           <Article key={dat.title} {...dat} />
         ))}
       </div>

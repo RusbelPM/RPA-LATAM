@@ -1,4 +1,4 @@
-import { Articles } from "../../interfaces";
+import { useCategories } from "../../hooks";
 import Article from "./article";
 
 const classes = {
@@ -9,24 +9,23 @@ const classes = {
 };
 
 interface Props {
-  category?: string;
-  data?: Array<Articles>;
+  nameCategory?: string;
   lotContent?: number;
   premium?: boolean;
 }
 
 const Premium: React.FC<Props> = ({
-  category = "",
-  data = [],
+  nameCategory = "",
   lotContent,
   premium = true,
 }) => {
+  const { categories } = useCategories(nameCategory);
   return (
     <>
       <div className={classes.main}>
-        <h1>{category}</h1>
+        <h1>{nameCategory}</h1>
         <div className={classes.content}>
-          {data.slice(0, lotContent).map((dat) => (
+          {categories.slice(0, lotContent).map((dat) => (
             <Article key={dat.title} {...dat} />
           ))}
         </div>
