@@ -1,4 +1,4 @@
-import { News, Technology, TheLast, Science, Sports, Business, Entertainment, Health } from "../page";
+import { Categories, TheLast } from "../page";
 
 interface Route {
     to:string;
@@ -15,45 +15,39 @@ export const routes:Route[]= [
         name:'Lo último'
     },
     {
-        to:'/news',
-        path:'news',
-        Component: News,
-        name:'Noticias'
-    },
-    {
-        to:'/tecnology',
-        path:'tecnology',
-        Component: Technology,
+        to:'/technology',
+        path:'technology',
+        Component: Categories,
         name:'Tecnología'
     },
     {
         to:'/science',
         path:'science',
-        Component: Science,
+        Component: Categories,
         name:'Ciencia'
     },
     {
         to:'/business',
         path:'business',
-        Component: Business,
+        Component: Categories,
         name:'Negocios'
     },
     {
         to:'/sports',
         path:'sports',
-        Component: Sports,
+        Component: Categories,
         name:'Deporte'
     },
     {
         to:'/entertainment',
         path:'entertainment',
-        Component: Entertainment,
+        Component: Categories,
         name:'Entretenimiento'
     },
     {
         to:'/health',
         path:'health',
-        Component: Health,
+        Component: Categories,
         name:'Salud'
     },
 ]

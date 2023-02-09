@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# RPA NEWS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto se inició con [Create React App] (https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## URL
 
-In the project directory, you can run:
+## Descripción
 
-### `yarn start`
+Aplicación de noticias   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologías utilizadas 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React
 
-### `yarn test`
+- Sass
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- axios
 
-### `yarn build`
+- react-router-dom 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Utilidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## React 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- se utilizo React porque te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en  tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.
 
-### `yarn eject`
+## Sass
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- se utilizo Sass porque te permite extender las posibilidades de las hojas de estilo, permitiendo hacer uso de múltiples atajos que facilitan la escritura del código y la productividad, además se puede utilizar la metodología BEM para dividir la interfaz de usuario en bloques independientes para crear componentes escalables y reutilizables.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Axios
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-  se utilizo Axios porque es más completa que Fetch, pues es una librería entera y no un solo método. Esto quiere decir que nos brinda más posibilidades, como el uso de interceptors en una petición HTTP.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## react-router-dom
 
-## Learn More
+- Se utilizo React Router DOM porque la navegación en la aplicación es muy sencillo, consiste en definir rutas, para que un componente sea visualizado al dirigirse a la ruta en el navegador. También podemos navegar entre rutas, a través de enlaces y hooks, para enviarle un estado asociado al componente navegados.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
