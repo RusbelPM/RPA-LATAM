@@ -26,7 +26,7 @@ export const Categories = () => {
   return (
     <main className={classes.thelast}>
       <div className={classes.title}>
-        <h1>Últimas noticias</h1>
+        <h1>{category}</h1>
       </div>
       <div className={classes.magazine}>
         <div className={classes.column}>

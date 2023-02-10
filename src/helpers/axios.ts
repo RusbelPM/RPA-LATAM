@@ -14,7 +14,7 @@ export const Axios = async (
     return axios
       .get(baseURL, {
         params: {
-          language: "en",
+          language: "es",
           apiKey: key,
           q: query,
         },
@@ -29,7 +29,7 @@ export const Axios = async (
     return axios
       .get(baseURL, {
         params: {
-          language: "en",
+          language: "es",
           apiKey: key,
           category,
           pageSize,

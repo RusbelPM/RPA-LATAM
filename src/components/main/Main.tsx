@@ -4,7 +4,7 @@ import Premium from "./premium";
 const Main = () => {
   return (
     <>
-      <Contain titleCategory="Medicina" nameCategory="health" lotContent={6} />
+      <Contain titleCategory="Salud" nameCategory="health" lotContent={6} />
       <Contain
         titleCategory="Negocios"
         nameCategory="business"

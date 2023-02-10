@@ -4,8 +4,6 @@ import Article from "./article";
 const classes = {
   main: "premium",
   content: "premium__article",
-  image: "premium__article__image",
-  text: "premium__article__text",
 };
 
 interface Props {
