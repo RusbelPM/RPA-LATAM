@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Contain from "../components/main/contain";
 import { useNote } from "../hooks/useNews";
 import LayoutContent from "../layout/LayoutContent";
 import LayoutGrid from "../layout/LayoutGrid";
@@ -17,7 +18,6 @@ export const NoteNews = () => {
           <h1>{note.title}</h1>
           <h2>{note.description}</h2>
           <img src={note.urlToImage} alt={note.title} />
-
           <div className="note-news__publish">
             <p>{note.publishedAt.slice(0, 10)}</p>
           </div>
@@ -42,6 +42,11 @@ export const NoteNews = () => {
             </p>
           </div>
         </div>
+        <Contain
+          titleCategory="Ultimas noticias"
+          nameCategory="general"
+          lotContent={6}
+        />
       </LayoutGrid>
     </LayoutContent>
     // <>

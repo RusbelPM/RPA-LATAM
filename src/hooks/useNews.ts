@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Axios } from "../helpers/axios";
+import { dataDefault } from "../helpers/data";
 import { Articles } from "../interfaces";
 
 export const useArticles = () => {
@@ -25,7 +26,8 @@ export const useNote = (title: string = "") => {
   const [note, setNote] = useState<any>();
   useEffect(() => {
     getNote();
-  }, []);
+  }, [title]);
+  //funciona con note -> no puedo comprobar por falta de apiKey
   const getNote = async () => {
     console.log(await Axios("", 1, title));
     const data: Articles[] = await Axios("", 1, title.toLowerCase());
@@ -33,28 +35,10 @@ export const useNote = (title: string = "") => {
     if (data.length > 0) {
       setNote(data[0]);
     } else {
-      setNote({
-        source: {
-          id: null,
-          name: "SamMobile",
-        },
-        author: "SamMobile, Sagar Naresh",
-        title:
-          "Samsung Galaxy S23 Ultra durability test shows how 'rock-solid' it is - SamMobile - Samsung news",
-        description:
-          "The Galaxy S23 Ultra has impressed everyone with its performance improvements. In fact, it is the fastest Android smartphone in ...",
-        url: "https://www.sammobile.com/news/galaxy-s23-ultra-torture-test-rock-solid/",
-        urlToImage:
-          "https://www.sammobile.com/wp-content/uploads/2023/02/Samsung-Galaxy-S23-Ultra-Misty-Lilac-Rear-Design-720x405.jpg",
-        publishedAt: "2023-02-10T04:53:00Z",
-        content:
-          "The Galaxy S23 Ultra has impressed everyone with its performance improvements. In fact, it is the fastest Android smartphone in the world. However, not much has been said about its durability. The Ga… [+1570 chars]",
-      });
+      setNote(dataDefault);
     }
-
     setIsLoading(false);
   };
-
   return {
     isLoading,
     note,

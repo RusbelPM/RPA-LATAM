@@ -4,6 +4,11 @@ import Premium from "./premium";
 const Main = () => {
   return (
     <>
+      <Contain
+        titleCategory="Ultimas noticias"
+        nameCategory="general"
+        lotContent={6}
+      />
       <Contain titleCategory="Salud" nameCategory="health" lotContent={6} />
       <Contain
         titleCategory="Negocios"
