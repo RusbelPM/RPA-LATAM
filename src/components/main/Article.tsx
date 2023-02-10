@@ -16,11 +16,11 @@ const Article: React.FC<Articles> = ({ title, urlToImage, description }) => {
         </Link>
         <p>{description}</p>
       </div>
-      <Link to={`/note/${title}`}>
-        <div className={classes.imagen}>
+      <div className={classes.imagen}>
+        <Link to={`/note/${title}`}>
           <img src={urlToImage} alt={title} />
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };
