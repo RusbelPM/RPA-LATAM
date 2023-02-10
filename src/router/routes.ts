@@ -1,5 +1,4 @@
-import { Categories } from "../page";
-import Home from "../page/home";
+import { Categories, Home, Login, Register } from "../page";
 
 interface Route {
   to: string;
@@ -50,5 +49,17 @@ export const routes: Route[] = [
     path: "health",
     Component: Categories,
     name: "Salud",
+  },
+  {
+    to: "/login",
+    path: "login",
+    Component: Login,
+    name: "Login",
+  },
+  {
+    to: "/register",
+    path: "register",
+    Component: Register,
+    name: "Register",
   },
 ];
