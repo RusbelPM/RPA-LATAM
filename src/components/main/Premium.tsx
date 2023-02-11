@@ -1,5 +1,5 @@
 import { Articles } from "../../interfaces";
-import {ArticlesCat} from "./";
+import {ArticlesCat} from ".";
 
 const classes = {
   main: "premium",

@@ -1,7 +1,7 @@
 import { useCategories } from "../../hooks/useNews";
 import LayoutContent from "../../layout/LayoutContent";
 import { LayoutGrid } from "../../layout/LayoutGrid";
-import {Contain, Premium} from './';
+import {Contain, Premium} from '.';
 
 const Main = () => {
   const { categories } = useCategories();
