@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Axios } from '../helper/axios';
 import { Articles } from '../interfaces';
+import { dataDefault } from "../helpers/data";
 
 export const useNote = (title: string = '') => {
     const [isLoading, setIsLoading] = useState(true)
@@ -12,7 +13,7 @@ export const useNote = (title: string = '') => {
         if (data.length > 0) {
             setNote(data[0]);
         } else {
-            setNote({})
+            setNote(dataDefault)
         }
 
         setIsLoading(false);

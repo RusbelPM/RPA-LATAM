@@ -1,20 +1,25 @@
-import { Articles } from "../../interfaces";
+import { Link } from "react-router-dom";
+import { Articles as IArticles } from "../../interfaces";
 
 const classes = {
-  main: "articles",
-  content: "articles__content",
-  imagen: "articles__image",
+  main: "article-main",
+  content: "article-main__content",
+  imagen: "article-main__image",
 };
 
-export const ArticlesCat: React.FC<Articles> = ({ title, urlToImage, description }) => {
+export const Article: React.FC<IArticles> = ({ title, urlToImage, description }) => {
   return (
     <div className={classes.main}>
       <div className={classes.content}>
-        <h2 itemProp="title">{title}</h2>
+        <a href={`/note/${title}`}>
+          <h2 itemProp="title">{title}</h2>
+        </a>
         <p itemProp="description">{description}</p>
       </div>
       <div className={classes.imagen}>
-        <img src={urlToImage} alt={title} />
+        <Link itemProp="url" to={`/note/${title}`}>
+          <img src={urlToImage} alt={title} />
+        </Link>
       </div>
     </div>
   );
