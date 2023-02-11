@@ -1,7 +1,8 @@
 import axios from "axios";
 import { NewsData } from "../interfaces";
 
-const key = process.env.REACT_APP_NEWS_KEY;
+// const key = process.env.REACT_APP_NEWS_KEY;
+const key = '67b5d042a2dd445a956b1a0aa8daee95'
 const baseURL = "https://newsapi.org/v2/top-headlines";
 
 export const Axios = async (
