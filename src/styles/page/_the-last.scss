@@ -3,6 +3,16 @@
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+  p{
+    font-family: initial;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    @media screen and (max-width:$mobile) {
+      font-size: 1.1rem;
+    }  
+  }
 
   &__page-title {
     padding-left: 1.5rem;
@@ -12,11 +22,11 @@
     margin-top: 1rem;
     h1 {
       font-size: 1.75rem;
+      font-family: "Fraunces", serif;
       font-weight: 700;
       color: $semi-dark;
       text-align: center;
-      position: relative;      
-      
+      position: relative;     
       &:after {
         content: "";
         display: block;
@@ -33,7 +43,5 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-row-gap: 2rem;
-    
   }
-  
 }

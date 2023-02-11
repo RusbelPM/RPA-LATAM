@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
     description?: string,
@@ -26,7 +27,7 @@ export const ArticleNews: React.FC<Props> = ({description='', title, urlToImage=
             )
         }
     <h1 itemProp='title' className={classes.title}>
-      <a itemProp='url' href={`/note/${title}`} className={classes.link}>{title}</a>
+      <Link itemProp='url' to={`/note/${title}`} className={classes.link}>{title}</Link>
     </h1>
     <div className={classes.excerp}>
       <p itemProp='description'>{description}</p>

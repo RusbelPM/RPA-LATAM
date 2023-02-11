@@ -10,7 +10,7 @@ const classes = {
 export const Subscribe = () => {
   return (
       <nav className={classes.subscribe}>
-        <div className={classes.logo}>RPA NEWS</div>
+        <div className={classes.logo}>24 HORAS</div>
           <div className={classes.wrapbtn}>
             <button type="button" className={`${classes.button} s-btn`}><Link  to="/login">Inicia Sesión</Link></button>
             <button itemProp="description" className={`${classes.button} p-btn`}><Link to="/register" >Suscríbete</Link></button>

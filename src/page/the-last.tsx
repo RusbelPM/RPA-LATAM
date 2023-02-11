@@ -1,23 +1,25 @@
 import { Carousel } from "../components/carousel/carousel";
+import Main from "../components/main/main";
+import { Sniper } from "../global-component/loading/sniper";
 import { useArticles } from "../hooks"
 
-
+const  classes = {
+  title: 'responsive-wrapper__page-title',
+}
 
 export const TheLast = () => {
-  const { articles, isLoading } = useArticles();
-
-  const list = [];
-  list.push({ idx: 'column-1', data: articles.slice(1, 4) });
-  list.push({ idx: 'column-2', data: articles.slice(9, 12) });
-  list.push({ idx: 'column-3', data: articles.slice(13, 16) });
+  const { isLoading } = useArticles();
 
   if (isLoading) {
-    return <div>cargando...</div>
+    return <Sniper/>
   }
   return (
-
-    <div>
+    <>
+      <div className={classes.title}>
+        <h1 itemProp="title">Últimas noticias</h1>
+      </div>
       <Carousel/>
-    </div>
+      <Main/>
+    </>
   )
 }

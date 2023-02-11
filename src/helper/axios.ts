@@ -1,8 +1,7 @@
 import axios from "axios";
 import { NewsData } from "../interfaces";
 
-const key = "8a5d33ce46894c459dd63de2e871b6f8";
-
+const key = process.env.REACT_APP_NEWS_KEY;
 const baseURL = "https://newsapi.org/v2/top-headlines";
 
 export const Axios = async (
@@ -14,7 +13,7 @@ export const Axios = async (
     return axios
       .get(baseURL, {
         params: {
-          language: "en",
+          language: "es",
           apiKey: key,
           q: query,
         },
@@ -29,7 +28,7 @@ export const Axios = async (
     return axios
       .get(baseURL, {
         params: {
-          language: "en",
+          language: "es",
           apiKey: key,
           category,
           pageSize,

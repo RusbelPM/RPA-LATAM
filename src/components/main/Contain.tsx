@@ -1,5 +1,5 @@
 import { Articles } from "../../interfaces";
-import Article from "./article";
+import {ArticlesCat} from "./articles-main";
 
 interface Props {
   category?: string;
@@ -11,20 +11,15 @@ const classes = {
   main: "contain",
 };
 
-const Contain: React.FC<Props> = ({
-  category = "",
+export const Contain: React.FC<Props> = ({
   data = [],
-  lotContent = 5,
+  lotContent,
 }) => {
   return (
-    <>
-      <h1>{category}</h1>
       <div className={classes.main}>
         {data.slice(0, lotContent).map((dat) => (
-          <Article key={dat.title} {...dat} />
+          <ArticlesCat key={dat.title} {...dat} />
         ))}
       </div>
-    </>
   );
 };
-export default Contain;

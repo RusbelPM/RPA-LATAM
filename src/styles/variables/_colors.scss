@@ -9,9 +9,11 @@ $color-semi-third: #a0594cd2;
 
 $color-emp-pri: #f9f4ed;
 $color-emp-sec: #eaeaea;
-$color-emp-ter: #af695c;
+$color-emp-ter: #af685c;
 $color-emp-cua: #2a2a2a;
 $text-dark: #000;
+$color-degradado-dark: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.301));
+$color-shadow-dark:0 10px 20px rgba(0, 0, 0, 0.712), 0 6px 6px rgba(0,0,0,0.23);
 $text-light: #fff;
 $color-button: #e1dedb;
 $bg-color: linear-gradient(90deg, rgba(248,221,206,1) 0%, rgba(249,244,237,1) 53%, rgba(252,224,218,1) 100%);
