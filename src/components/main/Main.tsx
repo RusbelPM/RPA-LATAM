@@ -3,7 +3,7 @@ import LayoutContent from "../../layout/LayoutContent";
 import { LayoutGrid } from "../../layout/LayoutGrid";
 import {Contain, Premium} from '.';
 
-const Main = () => {
+export const Main = () => {
   const { categories } = useCategories();
 
   return (
