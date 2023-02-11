@@ -1,4 +1,4 @@
-import {Contain} from "./contain";
+import {Contain} from "./Contain";
 
 export const Main = () => {
   return (
