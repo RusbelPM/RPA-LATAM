@@ -4,7 +4,7 @@ interface Route {
   to: string;
   path: string;
   Component: () => JSX.Element;
-  name: string;
+  name?: string;
 }
 
 export const routes: Route[] = [

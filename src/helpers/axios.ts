@@ -1,7 +1,7 @@
 import axios from "axios";
 import { NewsData } from "../interfaces";
 
-const key = "42d323055b9d49e6bab62f84d073699c";
+const key = "f93bdb1532324dfca98451419c0f020c";
 
 const baseURL = "https://newsapi.org/v2/top-headlines";
 

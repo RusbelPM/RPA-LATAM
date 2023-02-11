@@ -1,5 +1,5 @@
 import Contain from "./contain";
-import Premium from "./premium";
+//import Premium from "./premium";
 
 const Main = () => {
   return (
@@ -9,7 +9,7 @@ const Main = () => {
         nameCategory="general"
         lotContent={6}
       />
-      <Contain titleCategory="Salud" nameCategory="health" lotContent={6} />
+      {/* <Contain titleCategory="Salud" nameCategory="health" lotContent={6} />
       <Contain
         titleCategory="Negocios"
         nameCategory="business"
@@ -20,7 +20,7 @@ const Main = () => {
         titleCategory="Tecnologia"
         nameCategory="technology"
         lotContent={12}
-      />
+      /> */}
     </>
   );
 };

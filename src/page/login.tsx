@@ -1,9 +1,22 @@
-import { Link } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import FormContainer from "../components/form/form-container";
+import { auth } from "../firebase";
 
 export const Login = () => {
-  const handleSubmit = (e: any) => {
+  const [err, setErr] = useState(false);
+  const navigate = useNavigate();
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (err) {
+      setErr(true);
+    }
   };
   return (
     <FormContainer title="Login">
@@ -11,7 +24,7 @@ export const Login = () => {
         <input type="email" placeholder="email" />
         <input type="password" placeholder="password" />
         <button>Login</button>
-        {/* <span>Something went wrong</span> */}
+        {err && <span>Something went wrong</span>}
       </form>
       <p>
         You don't have an account? <Link to="/register">Register</Link>
