@@ -1,38 +1,91 @@
 # RPA NEWS
 
-Este proyecto se inició con [Create React App] (https://github.com/facebook/create-react-app).
+## Dependecias del proyecto
 
-## URL
+| Nombre de paquete           | Versión  |
+| --------------------------- | -------- |
+| @testing-library/jest-dom   | ^5.14.1  |
+| @testing-library/react      | ^13.0.0  |
+| @testing-library/user-event | ^13.2.1  |
+| @types/jest                 | ^27.0.1  |
+| @types/node                 | ^16.7.13 |
+| @types/react                | ^18.0.0  |
+| @types/react-dom            | ^18.0.0  |
+| axios                       | ^1.3.2   |
+| firebase                    | ^9.17.1  |
+| react                       | ^18.2.0  |
+| react-dom                   | ^18.2.0  |
+| react-router-dom            | ^6.8.0   |
+| react-scripts               | 5.0.1    |
+| typescript                  | ^4.4.2   |
+| web-vitals                  | ^2.1.0   |
 
-## Descripción
+## Secuencia de carpetas
 
-Aplicación de noticias   
+- src
+  - components
+    - carousel
+    - footer
+    - form
+    - main
+    - search-news
+    - the-last
+    - ui
+  - context
+  - global-component
+    - loading
+  - helpers
+    - axios
+    - data
+  - hooks
+    - useNews
+    - useSearch
+  - interfaces
+    - interface
+  - layout
+    - layoutContent
+    - layoutGrid
+  - page
+    - categories
+    - login
+    - register
+    - note-news
+    - search
+    - the-last
+  - router
+    - app-router
+    - routes
+  - styles
+    - base
+    - components
+    - global-components
+    - layout
+    - page
+    - variables
 
-## Tecnologías utilizadas 
+### Metodologia a usar
 
-- React
+- Metodo BEM
 
-- Sass
+### Organización
 
-- axios
+- [Jira](https://miniproyectorpalatam.atlassian.net/jira/software/projects/MIN/boards/1)
 
-- react-router-dom 
+### Diseños
 
-## Utilidades
+- ![Diagrama](./public/img/diagrama.png)
+- ![Home](./public/img/home.jpg)
+- ![Categorias](./public/img/categorys.jpg)
+- ![Search](./public/img/search.jpg)
+- ![Register](./public/img/register.jpg)
 
-## React 
+## Pasos para colaborar con el proyecto
 
-- se utilizo React porque te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en  tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.
-
-## Sass
-
-- se utilizo Sass porque te permite extender las posibilidades de las hojas de estilo, permitiendo hacer uso de múltiples atajos que facilitan la escritura del código y la productividad, además se puede utilizar la metodología BEM para dividir la interfaz de usuario en bloques independientes para crear componentes escalables y reutilizables.
-
-## Axios
-
--  se utilizo Axios porque es más completa que Fetch, pues es una librería entera y no un solo método. Esto quiere decir que nos brinda más posibilidades, como el uso de interceptors en una petición HTTP.
-
-## react-router-dom
-
-- Se utilizo React Router DOM porque la navegación en la aplicación es muy sencillo, consiste en definir rutas, para que un componente sea visualizado al dirigirse a la ruta en el navegador. También podemos navegar entre rutas, a través de enlaces y hooks, para enviarle un estado asociado al componente navegados.
-
+- Habre la terminal en la carpeta donde quieres realizar el proyecto.
+- Coloca git clone ruta-del-proyecto (lo encontraras en el boton <>Code - HTTPS)
+- Crea tu propia rama > git branch nombre--rama
+- Ve a la rama donde quieres colaborar > git checkout nombre--rama
+- Realiza los cambios respetando la organizacion de las carpetas y el metodo BEM.
+- Por ultima publica tu rama.
+- Recuerda que estamos usando la api de NewsApi por lo que nos permite solo hacer
+  una cantidad limitada de peticiones, crea tu propia apiKey.
