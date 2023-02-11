@@ -21,7 +21,7 @@ export const AppRouter = () => {
         <Route path="search" element={<Search/>}/>
 
         
-        <Route path="*" element={ <Navigate to="/" replace /> } />
+        {/* <Route path="*" element={ <Navigate to="/" replace /> } /> */}
       </Routes>
       <Footer/>
     </>
