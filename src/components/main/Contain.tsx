@@ -1,10 +1,11 @@
-import { Articles } from "../../interfaces";
-import {ArticlesCat} from "./articles-main";
+import { useCategories } from "../../hooks";
+import { Article } from "./articles-main";
 
 interface Props {
-  category?: string;
-  data?: Array<Articles>;
-  lotContent?: number;
+  nameCategory?: string;
+  titleCategory?: string;
+  initContent: number;
+  lotContent: number;
 }
 
 const classes = {
@@ -12,14 +13,20 @@ const classes = {
 };
 
 export const Contain: React.FC<Props> = ({
-  data = [],
-  lotContent,
+  titleCategory = "",
+  nameCategory = "",
+  initContent = 0,
+  lotContent = 6,
 }) => {
+  const { categories } = useCategories(nameCategory);
   return (
+    <>
+      <h1>{titleCategory}</h1>
       <div className={classes.main}>
-        {data.slice(0, lotContent).map((dat) => (
-          <ArticlesCat key={dat.title} {...dat} />
+        {categories.slice(initContent, lotContent).map((dat) => (
+          <Article key={dat.title} {...dat} />
         ))}
       </div>
+    </>
   );
 };

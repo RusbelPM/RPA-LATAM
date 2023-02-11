@@ -1,34 +1,35 @@
-import { Articles } from "../../interfaces";
-import {ArticlesCat} from ".";
+import { useCategories } from "../../hooks";
+import { Article } from "./articles-main";
 
 const classes = {
   main: "premium",
   content: "premium__article",
-  image: "premium__article__image",
-  text: "premium__article__text",
 };
 
 interface Props {
-  category?: string;
-  data?: Array<Articles>;
+  titleCategory?: string;
+  nameCategory?: string;
   lotContent?: number;
 }
 
-export const Premium: React.FC<Props> = ({
-  category = "",
-  data = [],
+const Premium: React.FC<Props> = ({
+  titleCategory = "",
+  nameCategory = "",
   lotContent,
 }) => {
+  const { categories } = useCategories(nameCategory);
   return (
     <>
       <div className={classes.main}>
-        <h1>{category}</h1>
+        <h1>{titleCategory}</h1>
         <div className={classes.content}>
-          {data.slice(0, lotContent).map((dat) => (
-            <ArticlesCat key={dat.title} {...dat} />
+          {categories.slice(0, lotContent).map((dat) => (
+            <Article key={dat.title} {...dat} />
           ))}
         </div>
       </div>
     </>
   );
 };
+
+export default Premium

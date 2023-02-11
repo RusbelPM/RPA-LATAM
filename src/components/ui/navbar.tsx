@@ -1,6 +1,6 @@
-import { Subscribe } from '.';
-import {NavLink} from 'react-router-dom';
-import { routes } from '../../router/routes';
+import { Subscribe } from ".";
+import { NavLink } from "react-router-dom";
+import { routes } from "../../router/routes";
 
 import {useState} from 'react';
 import { SearchNews } from '../search-news/search-news';
@@ -19,28 +19,27 @@ const classes = {
 }
 
 export const Navbar = () => {
-    const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
-    const hiddenSidebar = () => setSidebar(false);
+  const showSidebar = () => setSidebar(!sidebar);
+  const hiddenSidebar = () => setSidebar(false);
 
-    return (
-        <header className={classes.navbar}>
-            <Subscribe/>
-            <nav className={classes.sidebarMenu}>
-                <div className={classes.menu} onClick={showSidebar}>
-                    {
-                        sidebar ?
-                            <div className={classes.hamburgerclose}>
-                                <span className={classes.hamburgerline1}></span>
-                                <span className={classes.hamburgerline2}></span>
-                            </div>
-                        :
-                            <div className={classes.iconMenu}>
-                                <span className={classes.drawhambur}></span>
-                            </div>
-                    }
-                </div>
+  return (
+    <header className={classes.navbar}>
+      <Subscribe />
+      <nav className={classes.sidebarMenu}>
+        <div className={classes.menu} onClick={showSidebar}>
+          {sidebar ? (
+            <div className={classes.hamburgerclose}>
+              <span className={classes.hamburgerline1}></span>
+              <span className={classes.hamburgerline2}></span>
+            </div>
+          ) : (
+            <div className={classes.iconMenu}>
+              <span className={classes.drawhambur}></span>
+            </div>
+          )}
+        </div>
 
                 <ul className={sidebar ? `${classes.menuItems} active`:`${classes.menuItems}`}>
                     {

@@ -1,5 +1,5 @@
 import { Carousel } from "../components/carousel/carousel";
-import { Main } from "../components/main/main";
+import { Main } from "../components/main";
 import { Sniper } from "../global-component/loading/sniper";
 import { useArticles } from "../hooks"
 

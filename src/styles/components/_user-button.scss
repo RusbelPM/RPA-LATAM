@@ -1,0 +1,24 @@
+.user-button{
+    display: flex;
+    gap: 10px;
+
+    img{
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    button{
+        background-color: $color-emp-ter;
+        color: $color-emp-pri;
+        font-size: 10px;
+        cursor: pointer;
+        padding:0px 10px ;
+        border-radius: 10px;
+        border: none;
+        @media (max-width:  $max-desktop) {
+            bottom: 10px;
+        }
+    }
+}
