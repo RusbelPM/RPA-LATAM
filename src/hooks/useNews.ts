@@ -1,90 +1,95 @@
-import { useEffect, useState } from "react";
-import { Axios } from "../helper/axios";
-import { Articles } from "../interfaces/interfaces";
+import { useEffect, useState } from 'react';
+import { Axios } from '../helper/axios';
+import { Articles } from '../interfaces';
 
-export const useBusiness = () => {
-  const [isLoading, setIsLoading] = useState(true);
+export const useNote = (title: string = '') => {
+    const [isLoading, setIsLoading] = useState(true)
 
-  const [business, setBusiness] = useState<Articles[]>([]);
+    const [note, setNote] = useState<any>();    
+    
+    const getNote = async () => {
+        const data: Articles[]  = await Axios('', 1, title);
+        if (data.length > 0) {
+            setNote(data[0]);
+        } else {
+            setNote({})
+        }
 
-  const getSectors = async () => {
-    const resp: Articles[] = await Axios("business");
+        setIsLoading(false);
+    }
 
-    setBusiness(resp);
-    setIsLoading(false);
-  };
+    useEffect(() => {
+        getNote();
+        //eslint-disable-next-line
+    }, [])
+    
+    return {
+        isLoading,
+        note
+    }
+}
 
-  useEffect(() => {
-    getSectors();
-  }, []);
+export const useArticles = () => {
+    const [isLoading, setIsLoading] = useState(true)
+    const [articles, setArticles] = useState<Articles[]>([]);    
+    
+    const getSectors = async () => {
+        const resp: Articles[] = await Axios();
+        
+        setArticles(resp);
+        setIsLoading(false);
+    }
 
-  return {
-    isLoading,
-    business,
-  };
-};
+    useEffect(() => {
+        getSectors();
+        //eslint-disable-next-line
+    }, [])
 
-export const useScience = () => {
-  const [isLoading, setIsLoading] = useState(true);
+    
+    return {
+        isLoading,
+        articles
+    }
+}
 
-  const [science, setScience] = useState<Articles[]>([]);
+export const useArticle= (query:string = '') => {
+    const [isloading, setIsloading] = useState(true);
+    const [searchNews, setGlobalNews ] = useState<Articles[]>([]);
 
-  const getSectors = async () => {
-    const resp: Articles[] = await Axios("science");
+    useEffect(() => {
+        getSearchNews()
+        //eslint-disable-next-line
+    }, [query]) 
 
-    setScience(resp);
-    setIsLoading(false);
-  };
+    const getSearchNews = async() => {
+        const data:Articles[] = await Axios('',10,query);
+        setGlobalNews(data)
+        setIsloading(false)
+    }
+    return {
+        isloading,
+        searchNews
+    }
+}
 
-  useEffect(() => {
-    getSectors();
-  }, []);
+export const useCategories= (category:string = '') => {
+    const [isLoading, setloading] = useState(true);
+    const [categories, setCategories ] = useState<Articles[]>([]);
 
-  return {
-    isLoading,
-    science,
-  };
-};
+    
+    const getCategories = async() => {
+        const data:Articles[] = await Axios(category);
+        setCategories(data)
+        setloading(false)
+    }
+    useEffect(() => {
+        getCategories()
+        //eslint-disable-next-line
+      }, [category]) 
 
-export const useHealth = () => {
-  const [isLoading, setIsLoading] = useState(true);
+    return {
+        isLoading,
+        categories
+    }
+}
 
-  const [health, setHealth] = useState<Articles[]>([]);
-
-  const getSectors = async () => {
-    const resp: Articles[] = await Axios("health");
-
-    setHealth(resp);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    getSectors();
-  }, []);
-
-  return {
-    isLoading,
-    health,
-  };
-};
-export const useTecnology = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const [technology, setTecnology] = useState<Articles[]>([]);
-
-  const getSectors = async () => {
-    const resp: Articles[] = await Axios("technology");
-
-    setTecnology(resp);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    getSectors();
-  }, []);
-
-  return {
-    isLoading,
-    technology,
-  };
-};

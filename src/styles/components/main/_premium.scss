@@ -1,7 +1,6 @@
 .premium{
     background-color: $color-emp-ter;
-    padding: 20px 20px 20px 0px;
-    
+    padding: 20px 20px 20px 0px;    
     &__article{
         display: grid;
         grid-template-columns: repeat(3,1fr);

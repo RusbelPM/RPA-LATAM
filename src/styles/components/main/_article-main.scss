@@ -1,11 +1,10 @@
-.article{
+.articles{
     padding-left: 30px;
     display: grid;
-    grid-template-columns: repeat(1, 1fr); // define dos columnas de tamaño igual
+    grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "area1"
                          "area2";
-    border-left: 1px solid $color-emp-ter;
-    
+    border-left: 1px solid $color-emp-ter; 
 
     &__image{
         grid-area: area1;
@@ -19,11 +18,8 @@
     &__content{
         grid-area: area2;
     }
-
-    
-
     @media (max-width: $mobile) {
-        grid-template-columns: repeat(1,1fr); // cambia a una sola columna en dispositivos pequeños
+        grid-template-columns: repeat(1,1fr);
         grid-template-areas: "area1"
                             "area2";        
         border-bottom: 1px solid $color-emp-ter;

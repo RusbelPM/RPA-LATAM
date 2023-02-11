@@ -3,18 +3,19 @@ import {NavLink} from 'react-router-dom';
 import { routes } from '../../router/routes';
 
 import {useState} from 'react';
+import { SearchNews } from '../search-news/search-news';
 
 const classes = {
     navbar:         'navbar',
-    sidebarMenu:   'navbar__sidebar-menu',
-    menu:        'navbar__menu',
-    iconMenu:      'navbar_menu__icon-menu',
-    drawhambur:    'navbar__menu__draw',
-    hamburgerclose:'navbar__menu__close',
-    hamburgerline1:'navbar__menu__line1',
-    hamburgerline2:'navbar__menu__line2',
-    menuItems:     'navbar__menu-items',
-    itemToggle:    'navbar__item-toggle',
+    sidebarMenu:    'navbar__sidebar-menu',
+    menu:           'navbar__menu',
+    iconMenu:       'navbar_menu__icon-menu',
+    drawhambur:     'navbar__menu__draw',
+    hamburgerclose: 'navbar__menu__close',
+    hamburgerline1: 'navbar__menu__line1',
+    hamburgerline2: 'navbar__menu__line2',
+    menuItems:      'navbar__menu-items',
+    itemToggle:     'navbar__item-toggle',
 }
 
 export const Navbar = () => {
@@ -55,6 +56,7 @@ export const Navbar = () => {
                             </li>
                         ))
                     }
+            <SearchNews/>
                 </ul>
             </nav>
         </header>

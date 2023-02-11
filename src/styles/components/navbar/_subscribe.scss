@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $color-secondary;
+  background: $color-primary;
   &__logo{
     font-weight: bold;
+    font-family: "Fraunces", serif
   }
-
   &__wrap-btn{
     margin: 0 -3.75rem;
   }
@@ -25,9 +25,9 @@
     
     a{
       text-decoration: none;
+      font-family: "Fraunces", serif;
     }
   }
-
 }
 .p-btn {
   border: 2px solid $color-button;

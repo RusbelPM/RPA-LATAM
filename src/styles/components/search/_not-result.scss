@@ -1,0 +1,43 @@
+.noresult{ 
+  &__result{
+    color: $color-semi-third;
+   }  
+  h1{
+    text-align:center;
+    font-size:4em;
+    letter-spacing: 2px;
+    margin-top:10vh;
+  }
+  h3{
+    text-align:center;
+    font-size:1.3em;
+    letter-spacing: 2px;
+
+    @media (max-width: $mobile) {
+    font-size:1em;
+   }
+  }
+  h4{
+    text-align:center;
+    padding-top:10px;
+    font-size:1.2em;
+    letter-spacing: 2px;
+  }
+  button{
+    font-size:1.1em;
+    text-transform:uppercase;
+    display:block;
+    margin:20px auto;
+    background-color:$dark;
+    color:$light;
+    border-radius: 10px;
+    outline:none;
+    padding:5px 35px;
+    &:hover{
+      background-color:$semi-dark;
+    }
+  }
+}
+
+
+ 

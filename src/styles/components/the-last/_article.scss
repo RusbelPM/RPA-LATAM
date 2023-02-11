@@ -11,11 +11,10 @@
 		}
 	}
 	&__article-title {
-		font-family: "Fraunces", serif;
 		font-weight: 900;
 		line-height: 1.25;
 		color: $semi-dark;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		margin-top: 1.5rem;
 	}
 
@@ -23,11 +22,14 @@
 		margin-top: 1.5rem;
 		font-size: 1.125rem;
 		line-height: 1.4;
-		p + p {
+		p  {
 			margin-top: 1.5rem;
+			font-family: initial;
+			font-size: 15px;
 		}
 	}
 	&__article-link {
 		color: inherit;
+		font-family: "Fraunces", serif;
 	}
 }

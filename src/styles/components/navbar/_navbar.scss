@@ -7,10 +7,9 @@
     &__sidebar-menu{
         height: 50px;
         margin: 0 auto;
-        border-bottom: 1px solid $semi-dark;
-
-        @media (max-width:  $max-desktop) {
-            border-bottom: none;
+        
+        @media screen and (max-width:$mobile) {
+            height: 0;
         }
     }
     &__menu-items{
@@ -27,12 +26,12 @@
         line-height: 50px;
         font-size: 11px;
         a{  
-            color: $color-semi-third;
             text-decoration: none;
             position: relative;
             border: solid 1px;
             padding: 5px;
             border-radius: 10px;
+            font-family: "Fraunces", serif;
         }
         a::after{
             content: '';
@@ -53,7 +52,6 @@
     }
 
     @media screen and (max-width:$max-desktop) {
-        
         &__menu {
             cursor: pointer;
             left: 2rem;
@@ -135,14 +133,14 @@
                 font-weight: 600;
             }
         }
+        
         .active {
             background: $color-semi-third;
             backdrop-filter: blur(10px);
             left: 0;
             transition: all 0.6s ease;
             padding-left: 0;
-            z-index: 1;
+            z-index: 2;
         }
-       
     }
 }

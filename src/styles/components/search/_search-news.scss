@@ -1,0 +1,20 @@
+.search{
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+    position: relative;
+
+    &__input-search{
+        font-family: "Fraunces", serif;
+        width: 70%;
+        padding: 0.6rem 1.4rem;
+        background-color: $light;
+        font-size: 10px;
+        border-radius: 10PX;
+        border: none;
+
+        &:focus {
+            outline: none;    
+        }
+        }
+}
